@@ -1,0 +1,188 @@
+/***********************************************
+*******************************************************************************
+**
+** Author - Dmitry Terakov <-> Joseph Dotz
+**
+** Copyright (C) 1997-2018 Free Software Foundation, Inc.
+**
+** This file is part of the RedL project.  This language is free
+** software; you can redistribute it and/or modify it under the
+** terms of the GNU General Public License as published by the
+** Free Software Foundation; either version 3, or (at your option)
+** any later version.
+
+** This file for project RedL is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+
+** You should have received a copy of the GNU General Public License
+** see the files License respectively in directory redl.  If not, see
+** <http://www.gnu.org/licenses/>.
+**
+** The creator of the entire Redl project is Dmitry Terakov :)
+** Thank you for your interest or even helping the RedL project
+** Good Luck!!!
+**
+***********************************************
+*******************************************************************************/
+
+
+
+cpplib("fstream")
+
+
+################
+#
+#   IN
+#
+################
+
+FUNCTION filestr(STR file) INT
+	INT x = 0
+	STR fill
+	cpp("ifstream sit(redlfile.c_str());")
+	cpp("if(!sit){cout << \"error\" << endl;return 0;}")
+	cpp("while (getline(sit, redlfill)){redlx++;}")
+	cpp("sit.close()")
+	return x
+END
+
+FUNCTION readfile(STR file,LSTR[] var)
+	cpp("long long z= 0;")
+	cpp("ifstream fin(redlfile.c_str());")
+	cpp("if(!fin) {cout << \"error\" << endl;return;}")
+	cpp("while (fin) {")
+	cpp("if(z == redlvar.size()) break;")
+	cpp("string s;")
+	cpp("getline(fin, s);")
+	cpp("redlvar[z] = s;")
+	cpp("z++;")
+	cpp("}")
+	cpp("fin.close()")
+END
+
+FUNCTION readstr(STR file,INT num,LSTR var)
+	cpp("long long z= 0;")
+	cpp("ifstream fin(redlfile.c_str());")
+	cpp("if(!fin) {cout << \"error\" << endl;return;}")
+	cpp("while (fin) {")
+	cpp("getline(fin, redlvar);")
+	cpp("if(z == redlnum) break;")
+	cpp("z++;")
+	cpp("}")
+	cpp("fin.close()")
+END
+
+FUNCTION fprintstr(STR file,INT num)
+	cpp("long long z= 0;")
+	cpp("ifstream fin(redlfile.c_str());")
+	cpp("if(!fin) {cout << \"error\" << endl;return;}")
+	cpp("while (fin) {")
+	cpp("string s;")
+	cpp("getline(fin, s);")
+	cpp("if(z == redlnum) {cout << s;break;}")
+	cpp("z++;")
+	cpp("}")
+	cpp("fin.close()")
+END
+
+FUNCTION fprint(STR file)
+	cpp("long long z= 0;")
+	cpp("ifstream fin(redlfile.c_str());")
+	cpp("if(!fin) {cout << \"error\" << endl;return;}")
+	cpp("while (fin) {")
+	cpp("string s;")
+	cpp("getline(fin, s);")
+	cpp("cout << s << endl;")
+	cpp("z++;")
+	cpp("}")
+	cpp("fin.close()")
+END
+
+
+
+
+
+
+
+################
+#
+#   OUT
+#
+################
+
+FUNCTION outfile(STR file,STR text)
+	cpp("ofstream out(redlfile.c_str());")
+	cpp("if(!out) {cout << \"error\" << endl;return;}")
+	cpp("out << redltext;")
+	cpp("out.close()")
+END
+
+
+FUNCTION refilestr(STR file,INT num,STR text)
+	cpp("long long io = 0;")
+	cpp("string fill;")
+	cpp("ifstream sit(redlfile.c_str());")
+	cpp("if(!sit){cout << \"error\" << endl;return;}")
+	cpp("while (getline(sit, fill)){io++;}")
+	cpp("sit.close();")
+	cpp("vector<string> var(io);")
+	cpp("long long z= 0;")
+	cpp("ifstream fin(redlfile.c_str());")
+	cpp("if(!fin) {cout << \"error\" << endl;return;}")
+	cpp("while (fin) {")
+	cpp("if(z == var.size()) break;")
+	cpp("string s;")
+	cpp("getline(fin, s);")
+	cpp("var[z] = s;")
+	cpp("z++;")
+	cpp("}")
+	cpp("fin.close();")
+	cpp("ofstream out(redlfile.c_str());")
+	cpp("for(long long poi = 0;poi<io;poi++) {")
+	cpp("if(poi == redlnum) {")
+	cpp("out << redltext;")
+	cpp("}else {")
+	cpp("out << var[poi] << endl;")
+	cpp("}")
+	cpp("}")
+	cpp("out.close();")
+END
+
+FUNCTION outfileend(STR file,STR text)
+	cpp("ofstream out(redlfile.c_str(), std::ios::app);")
+	cpp("if(!out) {cout << \"error\" << endl;return;}")
+	cpp("out << redltext;")
+	cpp("out.close();")
+END
+
+FUNCTION refilestart(STR file,STR text)
+	cpp("long long io = 0;")
+	cpp("string fill;")
+	cpp("ifstream sit(redlfile.c_str());")
+	cpp("if(!sit){cout << \"error\" << endl;return;}")
+	cpp("while (getline(sit, fill)){io++;}")
+	cpp("sit.close();")
+	cpp("vector<string> var(io);")
+	cpp("long long z= 0;")
+	cpp("ifstream fin(redlfile.c_str());")
+	cpp("if(!fin) {cout << \"error\" << endl;return;}")
+	cpp("while (fin) {")
+	cpp("if(z == var.size()) break;")
+	cpp("string s;")
+	cpp("getline(fin, s);")
+	cpp("var[z] = s;")
+	cpp("z++;")
+	cpp("}")
+	cpp("fin.close();")
+	cpp("ofstream out(redlfile.c_str());")
+	cpp("out << redltext;")
+	cpp("for(long long poi = 0;poi<io;poi++) {")
+	cpp("out << var[poi] << endl;")
+	cpp("}")
+	cpp("out.close();")
+END
+
+
+

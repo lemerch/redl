@@ -1,0 +1,6 @@
+icon("app_ico.ico")
+width(300)
+height(370)
+index("index.html")
+resizable(1)
+execute("mkdir TESTREDL")

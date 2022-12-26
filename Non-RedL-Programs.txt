@@ -1,0 +1,23 @@
+!! RedL license does not apply to these products !!
+
+
+1.Node JS -------
+                |
+                |
+       ----------
+       |
+    2.Electron JS ------> 3.Electron-Packager
+
+dir: 1.redl/Nodejs
+     2.redl/Nodejs/Packager/node_modules
+     3.redl/Nodejs/Packager
+
+
+
+4.C++/G++/mingw
+
+dir: 4.redl/x86_64-w64-mingw32
+
+5.Geany
+
+dir: 5.ide

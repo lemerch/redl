@@ -1,0 +1,6 @@
+build.rlf1/		icon("app_ico.ico")
+build.rlf2/		width(300)
+build.rlf3/		height(370)
+build.rlf4/		index("index.html")
+build.rlf5/		resizable(1)
+build.rlf6/		execute("mkdir TESTREDL")

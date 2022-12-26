@@ -1,0 +1,22 @@
+INT num1 = 0,num2 = 0
+STR operation
+print("Write first num: ")
+input(num1)
+
+print("Write second num: ")
+input(num2)
+
+print("Write operation: ")
+input(operation)
+
+if "+" in operation
+	print("\nResult: " $ num1 $ " + " $ num2 $ " = " $ num1+num2 $ "\n")
+elseif "-" in operation
+	print("\nResult: " $ num1 $ " - " $ num2 $ " = " $ num1-num2 $ "\n")
+elseif "*" in operation
+	print("\nResult: " $ num1 $ " * " $ num2 $ " = " $ num1*num2 $ "\n")
+elseif "/" in operation
+	print("\nResult: " $ num1 $ " / " $ num2 $ " = " $ num1/num2 $ "\n")
+elseif "%" in operation
+	print("\nResult: " $ num1 $ " % " $ num2 $ " = " $ num1%num2 $ "\n")
+end

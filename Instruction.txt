@@ -1,0 +1,16 @@
+------------------------------------------
+For a full installation,
+open the file - 
+...redl\Makebat.bat
+on behalf of the administrator and follow the requests.
+------------------------------------------
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                                     !!
+!! After actions, restart the computer !!
+!!                                     !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!----------------------------------------_______________________!!
+!! Attention,do not move or rename service files (.bat .exe .dll)!!
+!!----------------------------------------_______________________!!

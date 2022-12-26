@@ -1,0 +1,87 @@
+/***********************************************
+*******************************************************************************
+**
+** Author - Dmitry Terakov <-> Joseph Dotz
+**
+** Copyright (C) 1997-2018 Free Software Foundation, Inc.
+**
+** This file is part of the RedL project.  This language is free
+** software; you can redistribute it and/or modify it under the
+** terms of the GNU General Public License as published by the
+** Free Software Foundation; either version 3, or (at your option)
+** any later version.
+
+** This file for project RedL is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+
+** You should have received a copy of the GNU General Public License
+** see the files License respectively in directory redl.  If not, see
+** <http://www.gnu.org/licenses/>.
+**
+** The creator of the entire Redl project is Dmitry Terakov :)
+** Thank you for your interest or even helping the RedL project
+** Good Luck!!!
+**
+***********************************************
+*******************************************************************************/
+
+
+FUNCTION int_str(INT x,LSTR y)
+	cpp("stringstream ss")
+	cpp("ss << redlx")
+	cpp("ss >> redly")
+END
+
+FUNCTION str_int(STR x,LINT y)
+	STR new
+	INT z = 0
+	cycle z<=len(x)
+		if x[z] == '0'
+			new+="0"
+		elseif x[z] == '1'
+			new+="1"
+		elseif x[z] == '2'
+			new+="2"
+		elseif x[z] == '3'
+			new+="3"
+		elseif x[z] == '4'
+			new+="4"
+		elseif x[z] == '5'
+			new+="5"
+		elseif x[z] == '6'
+			new+="6"
+		elseif x[z] == '7'
+			new+="7"
+		elseif x[z] == '8'
+			new+="8"
+		elseif x[z] == '9'
+			new+="9"
+		end
+		
+		z++
+	end
+	
+	cpp("stringstream ss")
+	cpp("ss << redlnew")
+	cpp("ss >> redly")
+END
+
+
+FUNCTION flow(STR x,INT y) STR
+	cpp("string flowret")
+	cpp("long long z = 0")
+	cpp("redly-=1")
+	cpp("istringstream is(redlx)")
+	cpp("if(redly==-1) {")
+	cpp("	is >> flowret")
+	cpp("}else {")
+	cpp("	while(is >> redlx) {")
+	cpp("		if(z == redly) is >> flowret")
+	cpp("		z++")
+	cpp("	}")
+	cpp("}")
+	cpp("return flowret")
+END
+

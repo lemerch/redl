@@ -1,0 +1,15 @@
+{
+ "name": "build",
+ "productName": "build",
+ "version": "0.1.0",
+ "main": "main.js",
+ "devDependencies": {
+ "electron": "^1.4.3",
+ "electron-packager": "^8.1.0"
+ },
+ "scripts": {
+ "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=app_ico.ico --prune=true --out=release-builds",
+"package-win": "electron-packager . --overwrite --icon=app_ico.ico",
+"package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=app_ico.ico --prune=true --out=release-builds"
+ }
+}

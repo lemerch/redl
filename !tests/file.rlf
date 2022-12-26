@@ -1,0 +1,9 @@
+library("files.rlf")
+STR[filestr("123.txt")] x
+readfile("123.txt", x)
+INT z = 0
+cycle z < col(x)
+	print(x[z] $ "\n")
+	z++
+end
+outfile("1234.txt", "\n\n\n\n5")
