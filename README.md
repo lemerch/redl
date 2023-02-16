@@ -20,12 +20,12 @@
 
 ### The process of language RedL:
 
-##### 1.The preprocessor:
+ ##### 1.The preprocessor:
 
 a)Performs the function of creating an intermediate file with extracted files and recording their descriptions. 
 b)Preparing program arguments and then passing "To the interpreter".
 
-##### 2.Translator:
+ ##### 2.Translator:
 
 a) Determining the type of translation (which language to translate [c++/electron]).
 b) checking the correctness of the file.
