@@ -1,4 +1,4 @@
-# RedL [!ico](!tests/testgui/app_ico.ico) 
+# RedL ![ico](!tests/testgui/app_ico.ico) 
 ________
 ... 
 ________
