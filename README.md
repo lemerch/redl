@@ -1,7 +1,9 @@
-# RedL ![ico](!tests/testgui/app_ico.ico) 
+# RedL - Red Programming Language
 ________
-... 
-________
+**from 2024**
+
+This was my first project. I wrote it when I was 13 years old. Therefore, I ask you not to judge him harshly ;)
+_________
 ## RedL description - RedL [Red Language] is a free and open source programming language.
     
 
