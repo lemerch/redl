@@ -1,5 +1,3 @@
-!! RedL license does not apply to these products !!
-
 
 1.Node JS -------
                 |
