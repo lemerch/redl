@@ -10,22 +10,7 @@ _________
 
 ### RedL information:
 
-1.license – GNU GPL v3.0 (https://www.gnu.org/licenses/gpl-3.0).
-
-2.the latest version is 0.07 Betta (Demo).
-
-3.the goal is to increase the speed of writing code by simplifying the programming system and automating the compiler.
-
-
-### Important! The RedL license does not apply to the following products:
-    
-1.Node JS.
-
-2.Electron JS.
-
-3.C++/G++/mingw.
-
-4.Geany.
+the goal is to increase the speed of writing code by simplifying the programming system and automating the compiler.
 
 ### The process of language RedL:
 
